@@ -1,13 +1,14 @@
 import AddToFavourite from "./AddToFavourite"
 import WeatherCondition from "./WeatherCondition"
 import WeatherHeadLine from "./WeatherHeadLine"
-// import {useWeather} from '../../hooks'
-// import { WeatherContext } from "../../context"
-// import { useContext } from "react"
+import { useWeather } from "../../hooks"
+
+
 
 const WeatherBoard = () => {
 	
-	// const {weatherData, loading} = useContext(WeatherContext)
+	const {loading, error, weatherData} = useWeather();
+		console.log(weatherData, loading, error)
 	
   return (
     <div>
